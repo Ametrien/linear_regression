@@ -10,7 +10,7 @@ def data_remover():
             writer = csv.writer(input_csv)
             writer.writerows(lines)
 
-    # open the converted csv file
+    # open the converted csv filenormalize=False
     with open('log.csv', 'r') as source:
         rdr = csv.reader(source)
         # write only indices 2,3,4,5,6,8 that correspond to columns 3,4,5,6,7,9
