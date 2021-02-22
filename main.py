@@ -28,8 +28,8 @@ Y = data['medianComplexValue'].values  # values converts it into a numpy array
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y)
 
 corr = pd.DataFrame(data).corr()
-sns.heatmap(corr, mask=np.zeros_like(corr, dtype=bool),
-            cmap=sns.diverging_palette(220, 10, as_cmap=True), square=True)
+plt.figure(figsize=(11, 11))
+sns.heatmap(corr, cbar=1, square=1, annot_kws={'size': 15}, cmap= 'coolwarm')
 plt.show()
 
 regr = LinearRegression(normalize=True)  # creates object for the class
