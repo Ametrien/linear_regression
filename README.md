@@ -12,6 +12,8 @@ Project is created with:
 * Pandas
 * NumPy
 * Scikit-learn
+* Matplotlib
+* Seaborn
 
 ## Setup
 To run this project, run 'main.py'. 
