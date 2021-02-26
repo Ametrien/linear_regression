@@ -27,10 +27,11 @@ Y = data['medianComplexValue'].values  # values converts it into a numpy array
 # Split the data into training/testing sets
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y)
 
-corr = pd.DataFrame(data).corr()
-plt.figure(figsize=(11, 11))
-sns.heatmap(corr, cbar=1, square=1, annot_kws={'size': 15}, cmap= 'coolwarm')
-plt.show()
+# Make a heatmap:
+# corr = pd.DataFrame(data).corr()
+# plt.figure(figsize=(11, 11))
+# sns.heatmap(corr, cbar=1, square=1, annot_kws={'size': 15}, cmap= 'coolwarm')
+# plt.show()
 
 regr = LinearRegression(normalize=True)  # creates object for the class
 clf = regr.fit(X_train, Y_train)  # performs linear regression
