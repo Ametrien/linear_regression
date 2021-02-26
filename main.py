@@ -10,7 +10,7 @@ import sklearn.metrics as sm
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-dr.data_remover()
+# dr.data_remover()
 # Load data set
 data = pd.read_csv('dataset.csv')
 
