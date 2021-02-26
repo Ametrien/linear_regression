@@ -19,8 +19,8 @@ data.columns = ['complexAge', 'totalRooms', 'totalBedrooms',
                 'complexInhabitants', 'apartmentsNr', 'medianComplexValue']
 
 # Independent variables are stored in X
-X = data[['complexAge', 'totalRooms', 'totalBedrooms',
-          'complexInhabitants', 'apartmentsNr']].values
+X = data[['complexAge', 'totalBedrooms',
+          'complexInhabitants']].values
 # # Dependent variable (price) is stored in Y
 Y = data['medianComplexValue'].values  # values converts it into a numpy array
 
@@ -87,17 +87,14 @@ if p > 0.05:
 else:
     print('Probably different distributions\n')
 
-# Estimated multiple linear regression equation
-# 𝑓(𝑥) = 𝑏₀ + 𝑏₁𝑥₁ + 𝑏₂𝑥₂ + 𝑏3𝑥3 + 𝑏4𝑥4 + b5x5
-
 # x1 = input("Enter complexAge\n")
 # x2 = input("Enter totalRooms\n")
 # x3 = input("Enter totalBedrooms\n")
 # x4 = input("Enter complexInhabitants\n")
 # x5 = input("Enter apartmentsNr\n")
-#
+
 # inputs = [[x1, x2, x3, x4, x5]]
-inputs = [[1, 7099, 1106, 2401, 1138]]  # test is 358500, predicted is 317416
+inputs = [[1, 2401, 1138]]  # test is 358500, predicted is 317416
 prediction = regr.predict(inputs).flatten()
 
 print("Predicted value", prediction)
